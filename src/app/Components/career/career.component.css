@@ -1,0 +1,28 @@
+.center-section{
+    /* border: 2px solid black; */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  tr, td {
+    border: 1px ;
+    padding: 40px;
+    text-align: center;
+    width: 50%; /* Set each column to take up 50% of the table width */
+  }
+
+  #bgImg1{
+    background-image: url('https://images.unsplash.com/photo-1498946187162-07b3c978b218?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }

@@ -1,0 +1,25 @@
+
+<div class="container mt-4">
+    <h2>Our Dedicated Team Worldwide</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Spy Name</th>
+          <th scope="col">Spy Intel</th>
+          <th scope="col">Action</th>
+          <!-- Add more columns as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let spy of spies; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ spy.spy_Name }}</td>
+          <td>{{ spy.spy_Intel }}</td>
+          <td><button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button></td>
+          <!-- Add more columns as needed -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

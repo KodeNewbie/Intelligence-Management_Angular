@@ -1,0 +1,48 @@
+<!-- add-intel.component.html -->
+
+<div class="container mt-4">
+    <form (ngSubmit)="processAddIntelForm()" #intelForm="ngForm">
+      <div class="mb-3">
+        <label for="intelTitle" class="form-label">Intel Title</label>
+        <input type="text" class="form-control" id="intelTitle" name="intelTitle" [(ngModel)]="intel.intel_Title" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="intelDetails" class="form-label">Intel Details</label>
+        <textarea class="form-control" id="intelDetails" name="intelDetails" [(ngModel)]="intel.intel_Details" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="intelImages" class="form-label">Add Intel Document(s) :</label>
+        <input class="form-control" type="file" id="intelImages" multiplen disabled>
+    </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <div>
+    <div class="container mt-4">
+      <h2>Intel List</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Intel Title</th>
+            <th scope="col">Mission Details</th>
+            <th scope="col">Action</th>
+            <!-- Add more columns as needed -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let intel of intels; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ intel.intel_Title }}</td>
+            <td>{{ intel.intel_Details}}</td>
+            <td><button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button></td>
+            <!-- Add more columns as needed -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>

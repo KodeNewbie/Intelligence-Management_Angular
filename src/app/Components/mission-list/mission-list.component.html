@@ -1,0 +1,116 @@
+<div class="container mt-4">
+  <h2>Mission List</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Mission Name</th>
+        <th scope="col">Mission Description</th>
+        <th scope="col">Action</th>
+        <!-- Add more columns as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mission of missions; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ mission.mission_Name }}</td>
+        <td>{{ mission.mission_Description }}</td>
+        <td>
+          <button class="btn btn-outline-success" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </td>
+        <!-- Add more columns as needed -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br><br><br>
+<h2>Add a mission:</h2>
+<br>
+
+<div>
+  <form style="text-align: left" (ngSubmit)="processAddMissionForm()">
+    <div class="mb-3">
+      <label for="exampleInputName" class="form-label">Mission Name* :</label>
+      <input
+        type="text"
+        name="spy_Name"
+        class="form-control"
+        id="exampleInputName"
+        aria-describedby="emailHelp"
+        [(ngModel)]="mission.mission_Name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputUserName" class="form-label">Mission User Name* :</label>
+      <input
+        type="text"
+        name="spy_UserName"
+        class="form-control"
+        id="exampleInputUserName"
+        aria-describedby="emailHelp"
+        [(ngModel)]="mission.mission_UserName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail" class="form-label">Mission mission_Location* :</label>
+      <input
+        type="email"
+        name="spy_Email"
+        class="form-control"
+        id="exampleInputEmail"
+        aria-describedby="emailHelp"
+        [(ngModel)]="mission.mission_Location"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPhone" class="form-label">Mission Expense* :</label>
+      <input
+        type="text"
+        name="spy_Phone"
+        class="form-control"
+        id="exampleInputPhone"
+        aria-describedby="emailHelp"
+        [(ngModel)]="mission.mission_Expense"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword" class="form-label">Mission Date* :</label>
+      <input
+        type="text"
+        name="spy_Password"
+        class="form-control"
+        id="exampleInputPassword"
+        [(ngModel)]="mission.mission_Date"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputIntel" class="form-label">Mission Description* :</label>
+      <textarea
+        class="form-control"
+        name="spy_Intel"
+        id="exampleInputIntel"
+        rows="3"
+        [(ngModel)]="mission.mission_Description"
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="formFileMultiple" class="form-label">Add Document(s) :</label>
+      <input
+        class="form-control"
+        name="spy_Files"
+        type="file"
+        id="formFileMultiple"
+        multiple
+        [(ngModel)]="mission.misson_Files"
+        disabled
+      />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">
+      Submit Your Application
+    </button>
+  </form>
+</div>

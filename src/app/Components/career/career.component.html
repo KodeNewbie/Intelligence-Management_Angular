@@ -1,0 +1,67 @@
+<table>
+    <tr>
+      <td>
+        <h3>A for</h3>
+        <h1>Adventure</h1>
+      </td>
+      <td>
+        <p>
+          <strong
+            >Embark on a journey of pure excitement and discovery ! </strong
+          >
+        </p>
+        <p>
+        Join us in the
+          realm of adventure, where every step is a promise of something new and
+          extraordinary. Whether it's conquering untamed landscapes or unraveling
+          the mysteries of unexplored territories, our invitation is simple: let's
+          embrace the thrill together and create memories that last a lifetime.
+          Adventure awaits, and we're calling all enthusiasts to join us in the
+          pursuit of the extraordinary. Let the journey begin!
+        </p>
+      </td>
+    </tr>
+  </table>
+  
+  <section class="center-section">
+    <table >
+        <tr>
+          <td>
+            <form style="text-align: left;" (ngSubmit)="processAddSpyForm()">
+              <div class="mb-3">
+              <label for="exampleInputName" class="form-label" >Full Name* :</label>
+              <input type="text" name="spy_Name" class="form-control" id="exampleInputName" aria-describedby="emailHelp" [(ngModel)]="spy.spy_Name" >
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputUserName" class="form-label">User Name* :</label>
+              <input type="text" name="spy_UserName" class="form-control" id="exampleInputUserName" aria-describedby="emailHelp" [(ngModel)]="spy.spy_UserName" >
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail" class="form-label">Email Address* :</label>
+                <input type="email" name="spy_Email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" [(ngModel)]="spy.spy_Email">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPhone" class="form-label">Phone Number* :</label>
+                <input type="text" name="spy_Phone" class="form-control" id="exampleInputPhone" aria-describedby="emailHelp" [(ngModel)]="spy.spy_Phone" >
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword" class="form-label">Password* :</label>
+                <input type="password" name="spy_Password" class="form-control" id="exampleInputPassword" [(ngModel)]="spy.spy_Password" >
+            </div>
+            <!-- <div class="mb-3">
+        <label for="exampleInputIntel" class="form-label">Add Intel(s) :</label>
+        <textarea class="form-control" name="spy_Intel" id="exampleInputIntel" rows="3" [(ngModel)]="spy.spy_Intel" ></textarea>
+    </div> -->
+    <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Add Document(s) :</label>
+        <input class="form-control" name="spy_Files" type="file" id="formFileMultiple" multiple [(ngModel)]="spy.spy_Files" disabled>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit Your Application</button>
+</form>
+          </td>
+          <td id="bgImg1">
+
+          </td>
+        </tr></table>
+    </section>
